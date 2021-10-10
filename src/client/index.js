@@ -8,7 +8,6 @@ import './styles/header.scss'
 
 console.log(checkURL);
 console.log(handleSubmit);
-alert("I EXIST")
 
 export {
     checkURL,
