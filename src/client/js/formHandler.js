@@ -1,4 +1,5 @@
 // const cors = require('cors')
+import 'regenerator-runtime/runtime'
 function handleSubmit(event) {
     event.preventDefault()
 
