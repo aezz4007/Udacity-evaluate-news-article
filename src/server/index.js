@@ -1,8 +1,8 @@
+//to use environmental variable, to hide API key from client side
 const dotenv = require('dotenv');
 dotenv.config();
 
-console.log(`Your API key is ${process.env.API_KEY}`);
-
+//server settings
 const path = require('path')
 const express = require('express')
 const bodyParser = require('body-parser')
@@ -17,16 +17,11 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors())
 
 
-console.log(__dirname)
-
 app.get('/', function (req, res) {
     res.sendFile('dist/index.html', { root: __dirname + '/..' })
 })
 
-// app.get('/apiURL', function (req, res) {
-//     res.send(res.json())
-// })
-
+//post message, sends user input to API, and returns API response
 app.post('/apiURL', async (req, res) => {
     try {
         const apiKey = process.env.API_KEY
@@ -35,6 +30,7 @@ app.post('/apiURL', async (req, res) => {
         const response = await fetch(`https://api.meaningcloud.com/sentiment-2.1?key=${apiKey}&url=${url}&lang=en`)
         res.send(await response.json())
         console.log('API response', response.json())
+        //error handling
     }
     catch (error) {
         console.log('API fetch error: ', error)

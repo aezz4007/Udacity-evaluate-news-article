@@ -1,27 +1,47 @@
-# Webpack Express Example App
+# Evaluate News Article
+This project is a part of the Udacity's Advanced Front-end Web Developer Nanodegree.
+The starter code was provided by Udacity.
 
-The goal of this repo is be an example of a basic but functional app built on Express and Webpack.
+## Getting Started
+The purpose of the project is to evaluate a news article by submitting the URL into a simple form.
+The user is provided with information that is grabbed from an external API.
+The information tells the users about the sentiment of the article and other language analysis information.
 
-If you want to follow along with the course, you will start from the master and switch to the appropriate numbered branches of this repo as needed. The branches are:
-- [0-initial-setup](https://github.com/udacity/fend-webpack-content/tree/0-initial-setup)
-- [1-install-webpack](https://github.com/udacity/fend-webpack-content/tree/1-install-webpack)
-- [2-add-webpack-entry](https://github.com/udacity/fend-webpack-content/tree/2-add-webpack-entry)
-- [3-webpack-output-and-loaders](https://github.com/udacity/fend-webpack-content/tree/3-webpack-output-and-loaders)
-- [4-webpack-plugins](https://github.com/udacity/fend-webpack-content/tree/4-webpack-plugins)
-- [5-webpack-mode](https://github.com/udacity/fend-webpack-content/tree/5-webpack-mode)
-- [6-webpack-for-convenience](https://github.com/udacity/fend-webpack-content/tree/6-webpack-for-convenience)
+### Prerequisites
+You need to create an account at the meaningcloud.com website.
 
-Each one is a step along the path to creating a fully functional webpack setup. In each branch, there will be a documentation file that lists out the steps taken in that branch (each step should also match to a git commit if you look at the history) which you can use as a checklist when setting up your own projects. 
+The API will give you a key.
 
-## Get Up and Running
+Create a .env file. Add this code to the .env file:
 
-Fork this repo, then clone your forked repo down to your computer:
+`API_Key = 'api key from server'
 
-```
-git clone -- git@github.com:[your-user-name]/webpack-express.git --
-```
+### Installing
+To successfully run the project, you need to run:
 
-`cd` into your new folder and run:
-- ```npm install```
-- ```npm start``` to start the app
-- this app runs on localhost:8080, but you can of course edit that in index.js
+`npm install`
+
+`npm run start`
+
+`npm run build-prod`
+
+These commands will install all project dependencies and create the project folder.
+
+# Running the tests
+to run the test you need to run:
+
+`npm run test`
+
+## Built With
+Express
+NodeJS
+Webpack
+Jest
+
+## Author
+
+* **Amira Ezzeldin** 
+
+## Acknowledgments
+This project is inspired and instructed by Udacity. All the steps are carried out by following the instructions and exploring additional external resources.
+Special thanks to the very comprehensive and talented instructor.
